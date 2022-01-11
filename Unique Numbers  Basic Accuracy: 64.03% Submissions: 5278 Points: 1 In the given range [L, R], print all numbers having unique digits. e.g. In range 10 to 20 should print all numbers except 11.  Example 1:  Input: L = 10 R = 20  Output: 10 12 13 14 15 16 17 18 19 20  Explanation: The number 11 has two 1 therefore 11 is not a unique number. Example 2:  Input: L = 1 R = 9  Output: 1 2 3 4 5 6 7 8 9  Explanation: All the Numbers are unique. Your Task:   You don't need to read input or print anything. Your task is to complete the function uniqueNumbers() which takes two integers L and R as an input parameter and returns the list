@@ -4,6 +4,12 @@ using namespace std;
 
  // } Driver Code Ends
 //User function Template for C++
+ // { Driver Code Starts
+#include<bits/stdc++.h> 
+using namespace std; 
+
+ // } Driver Code Ends
+//User function Template for C++
 class Solution
 {
 public:
@@ -39,4 +45,23 @@ public:
 };
 
 
-
+// { Driver Code Starts.
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int l,r ;
+        cin >> l >> r;
+		Solution ob;
+		vector<int> numbers = ob.uniqueNumbers(l,r);
+		
+		for(int num : numbers){
+		   cout<<num<<" ";
+		}
+		cout<<endl;
+        
+    }
+    return 0;
+}  // } Driver Code Ends
