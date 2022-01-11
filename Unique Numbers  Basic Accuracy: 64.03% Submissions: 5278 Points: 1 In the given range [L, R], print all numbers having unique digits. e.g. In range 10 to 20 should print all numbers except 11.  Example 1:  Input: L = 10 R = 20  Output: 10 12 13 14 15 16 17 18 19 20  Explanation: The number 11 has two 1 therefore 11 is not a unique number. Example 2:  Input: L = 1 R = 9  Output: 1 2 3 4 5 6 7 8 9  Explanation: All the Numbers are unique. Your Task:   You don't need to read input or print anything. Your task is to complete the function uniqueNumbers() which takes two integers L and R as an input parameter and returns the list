@@ -1,0 +1,42 @@
+// { Driver Code Starts
+#include<bits/stdc++.h> 
+using namespace std; 
+
+ // } Driver Code Ends
+//User function Template for C++
+class Solution
+{
+public:
+    vector<int> uniqueNumbers(int L,int R)
+    {
+        // Write Your Code here
+        //for checking part is it unique
+        //creating the result vectoe
+        vector<int> vect;
+        //for traversing all value.
+        for(int i=L;i<=R;i++){
+            int num=i;
+            bool arr[10]={false};
+            //checking is it unique
+            while(num){
+                if(arr[num%10]){
+                    break;
+                }
+                else
+                {
+                    arr[num%10]=1;
+                num/=10;
+                }
+            }
+            //if that is unique then print the unique value
+            if(num==0){
+                vect.push_back(i);
+            }    
+            
+    }
+    return vect;
+}
+};
+
+
+
